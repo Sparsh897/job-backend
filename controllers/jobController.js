@@ -72,6 +72,7 @@ module.exports = {
         jobs = await Job.find({}, { createdAt: 0, updatedAt: 0, __V: 0 });
       }
       res.status(200).json({ jobs });
+      console.log("job api hitting");
     } catch (err) {
       res.status(500).json(err);
     }
